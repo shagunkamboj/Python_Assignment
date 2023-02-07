@@ -23,4 +23,8 @@ def prime_number(num):
     else:
         yield "not prime"
 y = prime_number(12)
+y1 = prime_number(5)
+y2 = prime_number(90)
 print(next(y))
+print(next(y1))
+print(next(y2))
