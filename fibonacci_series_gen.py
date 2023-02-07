@@ -8,13 +8,26 @@ def fibo(n):
         # print(b)
         yield b       
     else:
-        yield a,b
+        yield a
+        yield b
         # print(a,b,end = " ")   
                 
         for i in range(n-2):
             c = a+b
             a = b
             b = c
-            yield a,b
+            yield b
             # print(a,b,end = " ")     
-fibo(7)
+n = fibo(6)
+# print(n)
+#print(next(n))
+print(next(n))
+print(next(n))
+print(next(n))
+print(next(n))
+print(next(n))
+
+# n = fibo()
+# n.next()
+# for i in range(n):
+#     print(n.next())
