@@ -28,8 +28,8 @@ class Dog:
         print("the legs of the dog =",self.legs)
         print("the eyes of the dog =",self.eyes)
 
-obj5 = Room()
-obj5.Area1()  
+obj1 = Room()
+obj1.Area1()  
 
 
 obj2 = Bank_Account()
@@ -41,5 +41,5 @@ obj3.display3()
 obj4 = Employee()
 obj4.display4()
 
-obj1 = Dog()
-obj1.display1()
+obj5 = Dog()
+obj5.display1()

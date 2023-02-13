@@ -38,12 +38,12 @@ def password_checker(password):
             break
     if flag == -1:
         return "not a valid password"
-def login_details(email_id,password):
-    pass
-def after_login_successfully():
-    print("after login successfully")
-def update_details():
-    first_name = input("enter the name that you want to update")
+# def login_details(email_id,password):
+#     pass
+# def after_login_successfully():
+#     print("after login successfully")
+# def update_details():
+#     first_name = input("enter the name that you want to update")
 
 while True:
     print("1. Register yourself first!!!!")
@@ -82,6 +82,42 @@ while True:
     else:
         print("exist")
         break 
+def login_successfully(update_first_name,update_last_name,update_email_address):
+    return update_first_name
+    return update_last_name 
+    return update_email_address 
+
+
+while True:
+    print("1. update details")
+    print("2. delete profiles")
+    print("3. exist")
+    Registration_form(first_name,last_name,email_address)
+    
+    
+    update_option = int(input("enter the option you want to update ="))
+    if update_option == 1:
+        update_first_name = input("enter the first_name you want to update =")
+        update_last_name = input("enter the last_name you want to update =")
+        update_email_address = input("enter the email you want to update =")
+        
+        
+        a = login_successfully(update_first_name,update_last_name,update_email_address)
+        print(update_first_name)
+        print(update_last_name)
+        print(update_email_address)
+        
+        
+    else:
+        print("exist")
+
+    
+        
+    
+
+  
+    
+    
 
 
 
