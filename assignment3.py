@@ -9,8 +9,9 @@ def format_amount(amount):
     
     '''
     return f'{amount}.00'
-def convert_in_words(num):
-    def inner(amt):
+def convert_in_words(num,amt):
+    
+        
         for_amount = num(amt)
         n = int(float(for_amount))
         if n == 0:
@@ -35,7 +36,7 @@ def convert_in_words(num):
                     n%=100 
             
             return empty_string
-    return inner
-a = convert_in_words(format_amount)
-print(a(amount))
+    
+format_amount = convert_in_words(format_amount,amount)
+print(format_amount)
                 
