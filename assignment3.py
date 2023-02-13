@@ -1,3 +1,8 @@
+ones = ["","one","two","three","four","five","six","seven","eight","nine"]
+tens = ["","ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
+teens = ["ten","eleven","twelve","thirtheen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+empty_string = ""
+amount = int(input("enter the amount ="))
 def format_amount(amount):
     '''
     this is a doctring 
@@ -5,28 +10,32 @@ def format_amount(amount):
     '''
     return f'{amount}.00'
 def convert_in_words(num):
-    if num == 0:
-        return "zero"
-    ones = ["","one","two","three","four","five","six","seven","eight","nine"]
-    tens = ["","ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
-    teens = ["ten","eleven","twelve","thirtheen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
-    empty_string = ""
-    while num >0:
-        if num<10:
-            empty_string+= ones[num]
-            num = 0 
-        elif num>=10 and num<20:
-            empty_string+= teens[num%10]
-            num = 0 
-        elif num<100:
-            empty_string+= tens[num//10]
-            if num%10!=0:
-                empty_string+= "-"+ones[num%10]
-                num = 0 
+    def inner(amt):
+        for_amount = num(amt)
+        n = int(float(for_amount))
+        if n == 0:
+            return "zero"
         else:
-            empty_string+= ones[num//100]+" hundred "
-            num%=100 
-    return empty_string
-amount = int(input("enter the number which is less than 1000="))
-print(amount,convert_in_words(amount))
+   
+            while n >0:
+                empty_string = ""
+                if n<10:
+                    empty_string+= ones[n]
+                    n = 0 
+                elif n>=10 and n<20:
+                    empty_string+= teens[n%10]
+                    n= 0 
+                elif n<100:
+                    empty_string+= tens[n//10]
+                    if n%10!=0:
+                        empty_string =empty_string+"-"+ones[n%10]
+                        n = 0 
+                else:
+                    empty_string+= ones[n//100]+" hundred "
+                    n%=100 
+            
+            return empty_string
+    return inner
+a = convert_in_words(format_amount)
+print(a(amount))
                 
